@@ -1,0 +1,13 @@
+<p>{{msg}}&nbsp;</p>
+
+<h1>HOME</h1>
+
+<div ng-if="me!==null && me!==undefined && id == undefined" >
+  <h2> Welcome {{me.data.email}}</h2>
+  <textarea> Token : {{me.token}} </textarea>
+  <div ng-include="'/views/includes/createFolder.html'"> </div>
+  <a href="" ng-click="auth.destroy()">DESTROY</a>
+
+</div>
+
+<div ng-if="me==null || me==undefined" ng-include="'/views/includes/connexion.html'"></div>

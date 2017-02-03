@@ -1,0 +1,20 @@
+<p> ActionList.html </p>
+<a href="/#/dossier/action/create/{{dossier._id}}"> Ajouter une action </a>
+<br>
+<a href="/#/dossier/{{dossier.id}}"> retour dossier </a>
+<div ng-repeat="action in actions.data">
+  <p>refDossier : </p>
+  <p>{{action.refDossier}}</p>
+  <br>
+  <p>dateAction</p>
+  <p>{{action.dateAction}}</p>
+  <br>
+  <p>commentaire</p>
+  <p>{{action.commentaire}}</p>
+  <br>
+  <p> tempspassé : </p>
+  <p>{{action.tempspasse}} </p><br>
+
+  <a  href="/#/dossier/action/{{action._id}}" > Voir action </a>
+  <p> - - - - - - - - - - - - - -   - - - - - - - -   - -</p>
+</div>

@@ -1,0 +1,49 @@
+
+<p> Listes des ps : </p>
+<br>
+<a href="/#/porteur/create"> Creer un nouveau porteur </a>
+<br>
+<a href="/#/home"> home </a>
+<br>
+<!-- <label> Chercher dans le porteur d'id :<label> <input type="text" ng-model="id"> <a href="/#/porteur/{{id}}"> Rechercher </a> -->
+<br>
+<div ng-repeat="porteur in porteurs.data">
+  <p>Nom : </p>
+  <a href="/#/porteur/{{porteur._id}}">{{porteur.lastname}}</a>
+  <br>
+  <p>Prenom</p>
+  <p>{{porteur.firstname}}</p>
+  <br>
+  <p>Sexe</p>
+  <p>{{porteur.sexe}}</p>
+  <br>
+  <p> Date de naissance : </p>
+  <p>{{porteur.birthDate}} </p><br>
+
+  <p>Adresse:</p>
+  <p>{{porteur.adress}} </p>
+  <br>
+  <!--
+  <p>ville :</p>
+  <p>{{porteur.ville}}</p>
+
+  <br>
+  <p> numFixe : </p>
+  <p>{{porteur.numFixe}}</p>
+  <br>
+  <p> numPortable : </p>
+  <p>{{porteur.numPortable}}</p><br>
+
+  <p> siteWeb : </p>
+  <a href="{{porteur.siteWeb}}">{{porteur.siteWeb}}</a><br>
+
+  <p> SIRET : </p>
+  <p>{{porteur.siret}}</p><br>
+
+  <p> nbrSalarié : </p>
+  <p>{{porteur.nbrSalarie}} </p><br>
+
+  <p> Gerant : </p>
+  <p> {{porteur.gerant}}</p><br> -->
+  <p> - - - - - - - - - - - - - -   - - - - - - - -   - -</p>
+</div>

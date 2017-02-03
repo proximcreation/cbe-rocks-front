@@ -1,0 +1,139 @@
+<form name="myForm" ng-submit="create(formData,'inscrits')" novalidate >
+<p> Test </p>
+  <div class="row>">
+    <div class="col-lg-6">
+      <a  href="/#/dossier">Accès Dossier</a>
+  </div>
+
+  <div class="col-lg-4">
+     <a href="/#/porteur">Accès Porteurs</a>
+  </div>
+  <div class="col-lg-2">
+    <a href="/#/action">Accès Actions </a>
+  </div>
+</div>
+</form>
+<!--                        SAUT DE LIGNE
+
+<label>Comment avez vous connu notre organisme? :</label>
+<input type="string" ng-model="formData.reason" ng-required="false">
+
+<br>
+<label>Date RDV :</label>
+<input type="date" ng-model="formData.dateRDV" ng-required="false"></input>
+
+
+
+<br>
+<label> Nom : </label>
+<input type="text" ng-model="formData.lastname"  ng-required="false" ng-maxlength="15" >
+
+<br>
+<label> Prenom : </label>
+<input type="text" ng-model="formData.firstname" ng-required="false">
+
+<br>
+<label>Sexe:</label>
+<label>F</label> <input type="radio" ng-model="formData.sexe" value="F" ng-required="false">
+<label>M</label> <input type="radio" ng-model="formData.sexe"value="M" ng-required="false">
+
+
+
+<br>
+<label>Date de Naissance : </label>
+<input type="date" ng-model="formData.birthDate" ng-required="false">_direction
+
+<br>
+<label>Adresse :</label>
+<input type="string" ng-model="formData.adress" ng-required="false"></input>
+
+<br>
+<label> Ville :</label>
+<input type="text" ng-model="formData.city" ng-required="false" placeholder="Entrez votre ville"  ng-maxlength="33" ng-minlength="2" >
+
+<br>
+<label>Code Postal :</label>
+<input type="number" ng-model="formData.zipCode" ng-required="false" ng-minlength="5" ng-maxlength="5">
+
+                    SAUT DE LIGNE
+
+<br>
+<label> Fixe : </label>
+<input type="number" ng-model="formData.landLine" ng-required="false" ng-minlength="10" ng-maxlength="10">
+
+<br>
+<label>Mobile :</label>
+<input type="number" ng-model="formData.mobileNumber" ng-required="false" ng-minlength="10" ng-maxlength="10">
+
+<br>
+<label>Email :</label>
+<input type="string" ng-model="formData.email" placeholder="Entrez votre email" ng-required="false" >
+                    SAUT DE LIGNE
+
+<br>
+<div>
+  <label>Situation familliale :</label>
+  <label>Célibataire</label> <input type="radio" ng-required="false" ng-model="formData.familySituation" value="Celibataire">
+  <label>Concubinage</label> <input type="radio" ng-required="false" ng-model="formData.familySituation" value="Concubinage">
+  <label>PACSE</label> <input type="radio" ng-required="false" ng-model="formData.familySituation" value="PACSE">
+  <label>Marié</label> <input type="radio" ng-required="false" ng-model="formData.familySituation" value="Marie">
+  <label>Divorcé</label> <input type="radio" ng-required="false" ng-model="formData.familySituation" value="Divorce">
+</div>
+
+                    SAUT DE LIGNE
+
+<br>e
+<label>Enfant(s) à charge :</label>
+<input type="number" ng-model="formData.dependentChild" ng-required="false" ng-maxlength="1">
+
+                     SAUT DE LIGNE
+
+<br>
+<label>Travailleur handicapé :</label>
+<label>Oui</label> <input type="radio" ng-required="false" ng-model="formData.disabledWorker" value="Oui">
+<label>Non</label> <input type="radio" ng-required="false" ng-model="formData.disabledWorker" value="Non">
+<label>En cours</label> <input type="radio" ng-required="false" ng-model="formData.disabledWorker" value="En cours">
+
+                     SAUT DE LIGNE
+<br>
+<label>Formation Initiale :</label>
+<label>Sans Diplôme</label> <input type="radio" ng-model="formData.schoolCurriculum" value="sansDiplome" ng-required="false">
+<label>BEPC / CAP / BEP </label> <input type="radio" ng-model="formData.schoolCurriculum" value="bepc/cap/bep" ng-required="false">
+<label>BAC</label> <input type="radio" ng-model="formData.schoolCurriculum" value="bac" ng-required="false">
+<label>Bac+2 / BTS</label> <input type="radio" ng-model="formData.schoolCurriculum" value="bac+2/bts" ng-required="false">
+<label>Bac+3 / plus</label> <input type="radio" ng-model="formData.schoolCurriculum" value="bac+3/+" ng-required="false">
+<label ng-hide="formData.schoolCurriculum == 'sansDiplome'">Entrez votre formation : </label> <input type="string" ng-model="formData.diplome" ng-hide="formData.schoolCurriculum == 'sansDiplome'">
+                   SAUT DE LIGNE
+
+<br>
+<label>Experience :</label>
+<label>Oui</label> <input type="radio" ng-model="formData.experience" value="oui" ng-required="false">
+<label>Non</label> <input type="radio" ng-model="formData.experience" value="non" ng-required="false">
+  <label ng-show="formData.experience == 'oui' "> Métier(s) exercés </label> <input type="string" ng-model="formData.job" ng-show="experience == 'oui'" ng-required="false">
+
+                     SAUT DE LIGNE
+<br>
+<label> Situation Sociale: </label>
+<label>En activité :</label> <input type="checkbox" ng-model="formData.socialSituation.active" >
+<label>Etudiant :</label> <input type="checkbox" ng-model="formData.socialSituation.student" >
+<label>Retraité :</label> <input type="checkbox" ng-model="formData.socialSituation.retired" >
+<br>
+<label>Demandeur d'emploi :</label> <input type="checkbox" ng-model="formData.socialSituation.jobSeeker">
+<label>Inscription ANPE :</label> <input type="checkbox" ng-model="formData.socialSituation.anpeRegistered"  >
+<label ng-show="formData.socialSituation.anpeRegistered">Date Inscription ANPE :</label> <input type="Date" ng-model="formData.socialSituation.anpeRegistrationDate" ng-show="formData.socialSituation.anpeRegistered">
+<br>
+<label>ARE (fin)</label> <input type="checkbox" ng-model="formData.socialSituation.ARE" >
+<label>ASS</label> <input type="checkbox" ng-model="formData.socialSituation.ASS" >
+<label>RMI</label> <input type="checkbox" ng-model="formData.socialSituation.RMI" >
+<label>Non indemnisé</label> <input type="checkbox" ng-model="formData.socialSituation.notCompensated" >
+<br>
+<label>Autre</label> <input type="checkbox" ng-model="other" >
+<input type="String" ng-model="formData.socialSituation.other" ng-show="other == false" >
+<br>
+
+
+
+<br>
+<label></label>
+<input>
+-->

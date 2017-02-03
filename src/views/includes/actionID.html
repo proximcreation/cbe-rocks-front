@@ -1,0 +1,26 @@
+<p> ActionID.html </p>
+<a href="/#/dossier/action/patch/{{action._id}}"> Modifier </a>
+<a href="/#/dossier/{{_idDossier}}"> Retour dossier </a>
+<br>
+
+<p>RefDossier</p>
+<p>{{action.refDossier}}</p>
+<br>
+
+<p>dateAction</p>
+<p>{{action.dateAction}}</p>
+<br>
+
+<p>commentaire</p>
+<p>{{action.commentaire}}</p>
+<br>
+
+<p>Temps passé</p>
+<p>{{action.tempspasse}}</p>
+<br>
+
+<p> LISTE PORTEUR AFFILIÉ </p>
+<div ng-repeat="porteur in porteurs">
+  <a href="/#/porteur/{{porteur._id}}" > {{porteur.lastname}} </a>
+    <br>
+</div>

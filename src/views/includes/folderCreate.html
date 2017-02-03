@@ -1,0 +1,74 @@
+<form name="myForm" ng-submit="create(formData,'Dossiers')" novalidate >
+  <a href="/#/dossier" > Liste des dossiers </a>
+  <br>
+  <a href="/#/home"> home </a>
+
+  <!--                        SAUT DE LIGNE                       -->
+
+  <label>dateCreationPrevu</label>
+  <input type="date" ng-model="formData.dateCreationPrevu" ng-required="false">
+
+  <br>
+  <label>dateCreationDossier</label>
+  <input type="date" ng-model="formData.dateCreationDossier" ng-required="false"></input>
+
+  <!--                        SAUT DE LIGNE                       -->
+
+  <br>
+  <label>Enseigne</label>
+  <input type="text" ng-model="formData.enseigne"  ng-required="false" ng-maxlength="15" >
+
+  <br>
+  <label> adresse : </label>
+  <input type="text" ng-model="formData.adress" ng-required="false">
+  <br>
+
+  <label>codepostal:</label>
+  <input type="text" ng-model="formData.codePostal" ng-required="false">
+
+  <br>
+  <label>ville :</label>
+  <input type="text" ng-model="formData.ville" ng-required="false"></input>
+
+  <!--                        SAUT DE LIGNE                       -->
+
+  <br>
+  <label> numFixe : </label>
+  <input type="text" ng-model="formData.numFixe"  ng-required="false" ng-maxlength="15" >
+
+  <br>
+  <label> numPortable : </label>
+  <input type="text" ng-model="formData.numPortable" ng-required="false">
+  <br>
+  <label> siteWeb : </label>
+  <input type="text" ng-model="formData.siteWeb" ng-required="false">
+  <br>
+  <label> SIRET : </label>
+  <input type="text" ng-model="formData.siret" ng-required="false">
+  <br>
+  <label> nbrSalarié : </label>
+  <input type="Number" ng-model="formData.nbrSalarie" ng-required="false">
+  <br>
+  <label> Gerant : </label>
+  <input type="text" ng-model="formData.gerant" ng-required="false">
+  <br>
+
+
+  <p> LISTE PORTEUR DISPO </p>
+  <div >
+    <p ng-repeat="porteur in porteurs.data" ng-hide="exist(porteur)"> {{porteur.lastname}} </option>
+    <input type="button" value="+" ng-click="push(porteur)">
+  </div>
+  <p> LISTE PORTEUR AFFILIÉ </p>
+  <div >
+    <p ng-repeat="porteur in array_porteur"> {{porteur.lastname}} </option>
+    <input type="button" value="-" ng-click="pull(porteur)">
+  </div>
+
+  {{myForm.$invalid}}
+
+  <input type="submit" ng-disabled="myForm.$invalid" value="Envoyer" />
+
+
+
+</form>

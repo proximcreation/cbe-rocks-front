@@ -1,0 +1,101 @@
+<p> CREATEPORTEUR.html </p>
+
+<form name="myForm" ng-submit="create(formData,'porteurs')" novalidate >
+
+<!-- PARTIE PERSO -->
+  <br>
+  <label> Nom : </label>
+  <input type="text" ng-model="formData.lastname"  ng-required="false" ng-maxlength="15" >
+
+  <br>
+  <label> Prenom : </label>
+  <input type="text" ng-model="formData.firstname" ng-required="false">
+
+  <br>
+  <label>Sexe:</label>
+  <label>F</label> <input type="radio" ng-model="formData.sexe" value="F" ng-required="false">
+  <label>M</label> <input type="radio" ng-model="formData.sexe"value="M" ng-required="false">
+
+  <!--                        SAUT DE LIGNE                       -->
+
+  <br>
+  <label>Date de Naissance : </label>
+  <input type="date" ng-model="formData.birthDate" ng-required="false">
+
+  <br>
+  <label>Adresse :</label>
+  <input type="string" ng-model="formData.adress" ng-required="false"></input>
+
+  <br>
+  <label> Ville :</label>
+  <input type="text" ng-model="formData.city" ng-required="false" placeholder="Entrez votre ville"  ng-maxlength="33" ng-minlength="2" >
+
+  <br>
+  <label>Code Postal :</label>
+  <input type="number" ng-model="formData.zipCode" ng-required="false" ng-minlength="5" ng-maxlength="5">
+
+  <!--                        SAUT DE LIGNE                       -->
+
+  <br>
+  <label> Fixe : </label>
+  <input type="number" ng-model="formData.landLine" ng-required="false" ng-minlength="10" ng-maxlength="10">
+
+  <br>
+  <label>Mobile :</label>
+  <input type="number" ng-model="formData.mobileNumber" ng-required="false" ng-minlength="10" ng-maxlength="10">
+
+  <br>
+  <label> Fax : </label>
+  <input type="number" ng-model="formData.fax" ng-required="false" >
+
+  <br>
+  <label>Email :</label>
+  <input type="string" ng-model="formData.email" placeholder="Entrez votre email" ng-required="false" >
+
+  <!--   //situationFamiliale -->
+
+
+  <br>
+  <label> Cotorep : </label>
+  <input type="checkbox" ng-model="formData.cotorep" ng-required="false" >
+
+  <br>
+  <label> Enfant a charge : </label>
+  <input type="number" ng-model="formData.dependentChild" ng-required="false" >
+
+
+  <!-- PARTIE PRO -->
+
+
+  <!-- FORMATION -->
+
+
+  <br>
+  <label>Detail formation : :</label>
+  <input type="string" ng-model="formData.formationDetail"  ng-required="false" >
+
+  <!-- QUALIFICATION -->
+  <br>
+  <label> Date inscription anpe : </label>
+  <input type="Date" ng-model="formData.anpeRegistrationDate" ng-required="false">
+
+  <br>
+  <label> ID Anpe : </label>
+  <input type="string" ng-model="formData.idANPE" ng-required="false">
+
+  <!-- INDEMNITÉ -->
+
+  <br>
+  <label> Experience: </label>
+  <input type="checkbox" ng-model="formData.experience" ng-required="false">
+
+  <br>
+  <label> Nombre d'année(s) d'experience : </label>
+  <input type="number" ng-model="formData.nbrAnneeExperience" ng-required="false" >
+
+  <br>
+  <label>Detail Experience : :</label>
+  <input type="string" ng-model="formData.expDetail"  ng-required="false" >
+
+  <input type="submit" ng-disabled="myForm.$invalid" value="Envoyer" />
+</form>

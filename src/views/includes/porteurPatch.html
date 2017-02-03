@@ -1,0 +1,102 @@
+
+<p> PorteurPatch.html </p>
+
+<form name="myForm" ng-submit="patchObject('porteurs',formData)" novalidate >
+
+<br>
+<label> Nom : </label>
+<input type="text" ng-model="formData.lastname"  ng-value="porteur.lastname" >
+
+<br>
+<label> Prenom : </label>
+<input type="text" ng-model="formData.firstname" ng-required="false" ng-value="porteur.firstname">
+
+<br>
+<label>Sexe:</label>
+<label>F</label> <input type="radio" ng-model="formData.sexe" value="F" ng-required="false">
+<label>M</label> <input type="radio" ng-model="formData.sexe" value="M" ng-required="false">
+
+<!--                        SAUT DE LIGNE                       -->
+
+<br>
+<label>Date de Naissance : </label>
+<input type="date" ng-model="formData.birthDate" ng-required="false" ng-value="porteur.birthDate">
+
+<br>
+<label>Adresse :</label>
+<input type="string" ng-model="formData.adress" ng-required="false" ng-value="porteur.adress">
+
+<br>
+<label> Ville :</label>
+<input type="text" ng-model="formData.city" ng-required="false" placeholder="Entrez votre ville" ng-value="porteur.city" ng-maxlength="33" ng-minlength="2" >
+
+<br>
+<label>Code Postal :</label>
+<input type="number" ng-model="formData.zipCode" ng-required="false" ng-value="porteur.zipCode" ng-minlength="5" ng-maxlength="5">
+
+<!--                        SAUT DE LIGNE                       -->
+
+<br>
+<label> Fixe : </label>
+<input type="number" ng-model="formData.landLine" ng-required="false" ng-value="porteur.landLine" ng-minlength="10" ng-maxlength="10">
+
+<br>
+<label>Mobile :</label>
+<input type="number" ng-model="formData.mobileNumber" ng-required="false" ng-value="porteur.mobileNumber" ng-minlength="10" ng-maxlength="10">
+
+<br>
+<label> Fax : </label>
+<input type="number" ng-model="formData.fax" ng-required="false" ng-value="porteur.fax">
+
+<br>
+<label>Email :</label>
+<input type="string" ng-model="formData.email" placeholder="Entrez votre email" ng-value="porteur.email" ng-required="false" >
+
+<!--   //situationFamiliale -->
+
+
+<br>
+<label> Cotorep : </label>
+<input type="checkbox" ng-model="formData.cotorep" ng-required="false" ng-value="porteur.cotorep">
+
+<br>
+<label> Enfant a charge : </label>
+<input type="number" ng-model="formData.dependentChild" ng-required="false" ng-value="porteur.dependentChild">
+
+
+<!-- PARTIE PRO -->
+
+
+<!-- FORMATION -->
+
+
+<br>
+<label>Detail formation : :</label>
+<input type="string" ng-model="formData.formationDetail"  ng-required="false" ng-value="porteur.formationDetail">
+ ￼
+
+<!-- QUALIFICATION -->
+<br>
+<label> Date inscription anpe : </label>
+<input type="Date" ng-model="formData.anpeRegistrationDate" ng-required="false" ng-value="porteur.anpeRegistrationDate">
+
+<br>
+<label> ID Anpe : </label>
+<input type="string" ng-model="formData.idANPE" ng-required="false" ng-value="porteur.idANPE">
+
+<!-- INDEMNITÉ -->
+
+<br>
+<label> Experience: </label>
+<input type="checkbox" ng-model="formData.experience" ng-required="false" ng-value="porteur.experience">
+
+<br>
+<label> Nombre d'année(s) d'experience : </label>
+<input type="number" ng-model="formData.nbrAnneeExperience" ng-required="false" ng-value="porteur.nbrAnneeExperience">
+
+<br>
+<label>Detail Experience : :</label>
+<input type="string" ng-model="formData.expDetail"  ng-required="false" ng-value="porteur.expDetail">
+
+<input type="submit" ng-disabled="myForm.$invalid" value="Envoyer" href="/#/dossier/_id"/>
+</form>

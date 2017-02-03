@@ -1,0 +1,29 @@
+<p> folderActionCreateId.html </p>
+
+<form name="myForm" ng-submit="create(formData,'Actions')" novalidate >
+  <br>
+
+  <label>RefDossier</label>
+  <input type="number" ng-model="formData.refDossier"  ng-required="false" >
+  <br>
+  <label>dateAction</label>
+  <input type="date" ng-model="formData.dateAction"  ng-required="false" >
+  <br>
+  <label>commentaire</label>
+  <input type="string" ng-model="formData.commentaire"  ng-required="false" >
+  <br>
+  <label>Temps passé</label>
+  <input type="number" ng-model="formData.tempspasse"  ng-required="false" >
+
+  <input type="submit" ng-disabled="myForm.$invalid" value="Envoyer" />
+  <p> LISTE PORTEUR DISPO </p>
+  <div ng-repeat="porteur in porteurs" ng-hide="exist(porteur)">
+    <p > {{porteur.lastname}} </option>
+    <input type="button" value="+" ng-click="push(porteur)">
+  </div>
+  <p> LISTE PORTEUR AFFILIÉ </p>
+  <div ng-repeat="porteur in array_porteur">
+    <span> {{porteur.lastname}} </span>
+    <input type="button" value="-" ng-click="pull(porteur)">
+  </div>
+</form>

@@ -1,0 +1,50 @@
+
+<p> Listes des dossiers : </p>
+<br>
+<a href="/#/dossier/create"> Creer un nouveau dossier </a>
+<br>
+<a href="/#/home"> home </a>
+<br>
+<!-- <label> Chercher dans le dossier d'id :<label> <input type="text" ng-model="id"> <a href="/#/dossier/{{id}}"> Rechercher </a> -->
+<br>
+<div ng-repeat="dossier in dossiers.data">
+  <a  href="/#/dossier/{{dossier._id}}" >{{dossier.enseigne}} </a>
+  <p>dateCreationPrevu : </p>
+  <p>{{dossier.dateCreationPrevu}}</p>
+  <br>
+  <p>dateCreationDossier</p>
+  <p>{{dossier.dateCreationDossier}}</p>
+  <br>
+  <p>Enseigne</p>
+  <p>{{dossier.enseigne}}</p>
+  <br>
+  <p> adresse : </p>
+  <p>{{dossier.adress}} </p><br>
+
+  <p>codepostal:</p>
+  <p>{{dossier.codePostal}} </p>
+  <br>
+  <p>ville :</p>
+  <p>{{dossier.ville}}</p>
+
+  <br>
+  <p> numFixe : </p>
+  <p>{{dossier.numFixe}}</p>
+  <br>
+  <p> numPortable : </p>
+  <p>{{dossier.numPortable}}</p><br>
+
+  <p> siteWeb : </p>
+  <a href="{{dossier.siteWeb}}">{{dossier.siteWeb}}</a><br>
+
+  <p> SIRET : </p>
+  <p>{{dossier.siret}}</p><br>
+
+  <p> nbrSalarié : </p>
+  <p>{{dossier.nbrSalarie}} </p><br>
+
+  <p> Gerant : </p>
+  <p> {{dossier.gerant}}</p><br>
+
+  <p> - - - - - - - - - - - - - -   - - - - - - - -   - -</p>
+</div>

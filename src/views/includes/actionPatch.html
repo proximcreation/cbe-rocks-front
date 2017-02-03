@@ -1,0 +1,30 @@
+<p> actionPatch.html </p>
+<a href="/#/dossier/action/{{_id}}"> Retour Action </a>
+<form name="myForm" ng-submit="create(formData)" novalidate >
+  <br>
+
+  <label>RefDossier</label>
+  <input type="number" ng-model="formData.refDossier"  ng-value="action.refDossier" ng-required="false" >
+  <br>
+  <label>dateAction</label>
+  <input type="date" ng-model="formData.dateAction"  ng-value="action.dateAction" ng-required="false" >
+  <br>
+  <label>commentaire</label>
+  <input type="string" ng-model="formData.commentaire"  ng-value="action.commentaire" ng-required="false" >
+  <br>
+  <label>Temps passé</label>
+  <input type="number" ng-model="formData.tempspasse"  ng-value="action.tempspasse" ng-required="false" >
+  <br>
+  <p> LISTE PORTEUR DISPO </p>
+  <div ng-repeat="porteur in dossier_porteur" ng-if="!exist(porteur)">
+    <span> {{porteur.lastname}} </span>
+    <input type="button" value="+" ng-click="push(porteur)">
+  </div>
+  <p> LISTE PORTEUR AFFILIÉ </p>
+  <div ng-repeat="porteur in array_porteur">
+    <span> {{porteur.lastname}} </span>
+    <input type="button" value="-" ng-click="pull(porteur)">
+  </div>
+  <br>
+  <input type="submit" ng-disabled="myForm.$invalid" value="Envoyer" />
+</form>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="formApp">
+  <head>
+  </head>
+
+  <body ng-controller="formCtrl">
+    <!-- affichage du resultat de get -->
+    <form name="myForm" ng-submit="create(formData)" novalidate  >
+
+      <label>Em@il :</label>
+      <input type="string" ng-model="formData.email" placeholder="Entrez votre email" ng-required="false" >
+
+      <br>
+      <label> nom </label>
+      <input type="text" ng-model="formData.lastName" placeholder="Enter a name here" ng-maxlength="15" ng-required="false">
+      <p> {{aName}} </p>
+
+      <br>
+      <label> prenom </label>
+      <input type="text" ng-model="formData.firstName" placeholder="Enrez votre prenom" ng-required="false">
+
+      <br>
+      <label> Ville </label>
+      <input type="text" ng-model="formData.city" placeholder="Entrez votre ville"  ng-maxlength="33" ng-minlength="2" ng-required="false">
+
+      <br>
+      <input type="submit" ng-disabled="myForm.$invalid" value="Envoyer" />
+    </form>
+
+    <textarea name="name" rows="8" cols="80">{{formData}}</textarea>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

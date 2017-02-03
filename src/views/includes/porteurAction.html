@@ -1,0 +1,25 @@
+<p> porteurAction.html </p>
+<p>{{porteur.firstname}}</p>
+
+
+<div ng-repeat="action in actions.data">
+  <br>
+  <p>Dossier : </p>
+  <a>{{action.dossier.enseigne}}</a>
+  <br>
+  <br>
+  <p>refDossier : </p>
+  <p>{{action.refDossier}}</p>
+  <br>
+  <p>dateAction</p>
+  <p>{{action.dateAction}}</p>
+  <br>
+  <p>commentaire</p>
+  <p>{{action.commentaire}}</p>
+  <br>
+  <p> tempspassé : </p>
+  <p>{{action.tempspasse}} </p><br>
+
+  <a  href="/#/dossier/action/{{action._id}}" > Voir action </a>
+  <p> - - - - - - - - - - - - - -   - - - - - - - -   - -</p>
+</div>

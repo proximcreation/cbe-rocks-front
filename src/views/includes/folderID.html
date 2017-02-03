@@ -1,0 +1,44 @@
+<p> FOLDERID.HTML <p>
+  <a href="/#/dossier/patch/{{dossier._id}}"> Modifier </a>
+  <br>
+  <a href="/#/dossier/action/liste/{{dossier._id}}"> Voir les actions </a>
+
+  <p>dateCreationPrevu : </p>
+  <p>{{dossier.dateCreationPrevu}}</p>
+  <br>
+  <p>dateCreationDossier</p>
+  <p>{{dossier.dateCreationDossier}}</p>
+  <br>
+  <p>Enseigne</p>
+  <p>{{dossier.enseigne}}</p>
+  <br>
+  <p> adresse : </p>
+  <p>{{dossier.adress}} </p><br>
+
+  <p>codepostal:</p>
+  <p>{{dossier.codePostal}} </p>
+  <br>
+  <p>ville :</p>
+  <p>{{dossier.ville}}</p>
+
+  <br>
+  <p> numFixe : </p>
+  <p>{{dossier.numFixe}}</p>
+  <br>
+  <p> numPortable : </p>
+  <p>{{dossier.numPortable}}</p><br>
+
+  <p> siteWeb : </p>
+  <a href="{{dossier.siteWeb}}">{{dossier.siteWeb}}</a><br>
+
+  <p> SIRET : </p>
+  <p>{{dossier.siret}}</p><br>
+
+  <p> nbrSalarié : </p>
+  <p>{{dossier.nbrSalarie}} </p><br>
+
+  <p> Gerant : </p>
+  <p> {{dossier.gerant}}</p><br>
+
+  <p> Porteur </p>
+  <p ng-repeat="porteur in dossier.listePorteur"> <a href="/#/porteur/{{porteur._id}}"> {{porteur.lastname}} </a> </p>
