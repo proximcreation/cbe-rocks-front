@@ -2,43 +2,52 @@
   <a href="/#/dossier/patch/{{dossier._id}}"> Modifier </a>
   <br>
   <a href="/#/dossier/action/liste/{{dossier._id}}"> Voir les actions </a>
+<div class="row col-12">
 
-  <p>dateCreationPrevu : </p>
-  <p>{{dossier.dateCreationPrevu}}</p>
-  <br>
-  <p>dateCreationDossier</p>
-  <p>{{dossier.dateCreationDossier}}</p>
-  <br>
-  <p>Enseigne</p>
-  <p>{{dossier.enseigne}}</p>
-  <br>
-  <p> adresse : </p>
-  <p>{{dossier.adress}} </p><br>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-3">dateCreationPrevu : </label>
+    <span class=" input col-3">{{dossier.dateCreationPrevu}}</span>
 
-  <p>codepostal:</p>
-  <p>{{dossier.codePostal}} </p>
-  <br>
-  <p>ville :</p>
-  <p>{{dossier.ville}}</p>
+    <label class="col-3">dateCreationDossier</label>
+    <span class="input col-3">{{dossier.dateCreationDossier}}</span>
+  </div>
 
-  <br>
-  <p> numFixe : </p>
-  <p>{{dossier.numFixe}}</p>
-  <br>
-  <p> numPortable : </p>
-  <p>{{dossier.numPortable}}</p><br>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-3">Enseigne :</label>
+    <span class="input col-3">{{dossier.enseigne}}</span>
 
-  <p> siteWeb : </p>
-  <a href="{{dossier.siteWeb}}">{{dossier.siteWeb}}</a><br>
+    <label class="col-3"> adresse : </label>
+    <span class=" input col-3">{{dossier.adress}} </span>
+  </div>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-3">codepostal:</label>
+    <span class="input col-3">{{dossier.codePostal}} </span>
 
-  <p> SIRET : </p>
-  <p>{{dossier.siret}}</p><br>
+    <label class="col-3">ville :</label>
+    <span class="input col-3">{{dossier.ville}}</span>
+  </div>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-3"> numFixe : </label>
+    <span class="input col-3">{{dossier.numFixe}}</span>
 
-  <p> nbrSalarié : </p>
-  <p>{{dossier.nbrSalarie}} </p><br>
+    <label class="col-3"> numPortable : </label>
+    <span class="input col-3">{{dossier.numPortable}}</span>
+  </div>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-3"> siteWeb : </label>
+    <a class="input col-3" href="{{dossier.siteWeb}}">{{dossier.siteWeb}}</a>
 
-  <p> Gerant : </p>
-  <p> {{dossier.gerant}}</p><br>
+    <label class="col-3"> SIRET : </label>
+    <span class=" input col-3">{{dossier.siret}}</span>
+  </div>
+  <div class="input-group bg-base1 p1 col-12">
+    <label> nbrSalarié : </label>
+    <span class="input ">{{dossier.nbrSalarie}} </span>
 
-  <p> Porteur </p>
-  <p ng-repeat="porteur in dossier.listePorteur"> <a href="/#/porteur/{{porteur._id}}"> {{porteur.lastname}} </a> </p>
+    <label> Gerant : </label>
+    <span class="input"> {{dossier.gerant}}</span>
+  </div>
+  <label> Porteur </label>
+  <div ng-repeat="porteur in dossier.listePorteur">
+     <a class ="input" href="/#/porteur/{{porteur._id}}"> ---> {{porteur.lastname}} </a>
+  </div>

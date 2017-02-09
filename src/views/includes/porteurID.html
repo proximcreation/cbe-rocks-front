@@ -3,79 +3,79 @@
 <a href="/#/porteur"> retour liste </a>   <br>
 <a href="/#/porteur/actions/{{porteur._id}}"> Voir ses actions </a>   <br>
 <a href="/#/porteur/dossiers/{{porteur._id}}"> Voir ses dossiers </a> <br>
-  <p>Nom : </p>
-  <p >{{porteur.lastname}}</p>
-  <br>
-  <p>Prenom</p>
-  <p>{{porteur.firstname}}</p>
-  <br>
-  <p>Sexe</p>
-  <p>{{porteur.sexe}}</p>
-  <br>
-  <p> Date de naissance : </p>
-  <p>{{porteur.birthDate}} </p><br>
+<div class="row lg-12">
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-2">Nom : </label>
+    <span class="input col-4">{{porteur.lastname}}</span>
 
-  <p>Adresse:</p>
-  <p>{{porteur.adress}} </p>
-  <br>
+    <label class="col-2">Prenom</label>
+    <span class="input col-4">{{porteur.firstname}}</span>
+  </div>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-2">Sexe</label>
+    <span class="input col-4">{{porteur.sexe}}</span>
 
-  <p>Ville:</p>
-  <p>{{porteur.city}} </p>
-  <br>
+    <label class="col-2"> Date de naissance : </label>
+    <span class="input col-4">{{porteur.birthDate}} </span>
+  </div>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-2">Adresse:</label>
+    <span class="input col-2">{{porteur.adress}} </span>
 
-  <p>Code Postale:</p>
-  <p>{{porteur.zipCode}} </p>
-  <br>
+    <label class="col-2">Ville:</label>
+    <span class="input col-2">{{porteur.city}} </span>
 
-  <p>Numero de fixe:</p>
-  <p>{{porteur.landLine}} </p>
-  <br>
+    <label class="col-2">Code Postale:</label>
+    <span class="input col-2">{{porteur.zipCode}} </span>
+  </div>
+  <div class="input-group bg-base1 p1 col-12">
 
-  <p>Numero de portable:</p>
-  <p>{{porteur.mobileNumber}} </p>
-  <br>
+    <label class="col-2">Numero de fixe:</label>
+    <span class="input col-2"> {{porteur.landLine}} </span>
 
-  <p>fax:</p>
-  <p>{{porteur.fax}} </p>
-  <br>
+    <label class="col-2">Numero de portable:</label>
+    <span class="input col-2">{{porteur.mobileNumber}} </span>
 
-  <p>email:</p>
-  <p>{{porteur.email}} </p>
-  <br>
+    <label class="col-2">fax:</label>
+    <span class="input col-2">{{porteur.fax}} </span>
+  </div>
 
-  <!-- situationFamiliale -->
-  <p>cotorep:</p>
-  <p>{{porteur.cotorep}} </p>
-  <br>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-2">email:</label>
+    <span class="input col-10">{{porteur.email}} </span>
+  </div>
 
-  <p>Enfant a charge:</p>
-  <p>{{porteur.dependentChild}} </p>
-  <br>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-2">cotorep:</label>
+    <span class="input col-4"> {{porteur.cotorep}} </span>
 
-  <!-- formation -->
-  <p>Detail Formation ::</p>
-  <p>{{porteur.formationDetail}} </p>
-  <br>
+    <label class="col-2">Enfant a charge:</label>
+    <span class="input col-4">{{porteur.dependentChild}} </span>
+  </div>
 
-  <!-- qualification -->
+    <!-- formation -->
+    <div class="input-group bg-base1 p1 col-12">
 
-  <p>Date inscriion ANPE :</p>
-  <p>{{porteur.anpeRegistrationDate}} </p>
-  <br>
+      <label class="col-2">Detail Formation ::</label>
+      <span class="input col-10">{{porteur.formationDetail}} </span>
+    </div>
+    <!-- qualification -->
+    <div class="input-group bg-base1 p1 col-12">
+      <label class="col-2">Date inscription ANPE :</label>
+      <span class="input col-4">{{porteur.anpeRegistrationDate}} </span>
+      <label class="col-2">ID ANPE :</label>
+      <span class="input col-4">{{porteur.idANPE}} </span>
+    </div>
 
-  <p>ID ANPE :</p>
-  <p>{{porteur.idANPE}} </p>
-  <br>
+    <div class="input-group bg-base1 p1 col-12">
+      <label class="col-2"> Experience :</label>
+      <span class="input col-4">{{porteur.experience}} </span>
 
-  <!-- indemnité -->
-  <p> Experience :</p>
-  <p>{{porteur.experience}} </p>
-  <br>
-
-  <p>Année(s) d'experience ::</p>
-  <p>{{porteur.nbrAnneeExperience}} </p>
-  <br>
-
-  <p>Detail experience :</p>
-  <p>{{porteur.expDetail}} </p>
-  <br>
+      <label class="col-2">Année(s) d'experience ::</label>
+      <span class="input col-4">{{porteur.nbrAnneeExperience}} </span>
+    </div>
+    <div class="input-group bg-base1 p1 col-12">
+      <label class="col-2">Detail experience :</label>
+      <span class="input col-10">{{porteur.expDetail}} </span>
+    </div>
+  </div>

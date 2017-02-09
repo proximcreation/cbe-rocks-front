@@ -11,6 +11,10 @@ module.exports = (function(){
 			templateUrl: 'views/home.html',
 			controller: 'HomeCtrl'
 		})
+		.when('/test',{           //LISTE DOSSIER
+			templateUrl: 'views/includes/brouillon.html'
+	//		controller: ''
+		})
 		.when('/dossier',{           //LISTE DOSSIER
 			templateUrl: 'views/includes/folderList.html',
 			controller: 'FolderListCtrl'
@@ -48,7 +52,7 @@ module.exports = (function(){
 			controller: 'PorteurListCtrl'
 		})
 		.when('/porteur/create',{					//creer un porteur
-			templateUrl: 'views/includes/createPorteur.html',
+			templateUrl: 'views/includes/porteurCreate.html',
 			controller: 'HomeCtrl'
 		})
 		.when('/porteur/:_id',{             ///voir le porteur d'id :_id

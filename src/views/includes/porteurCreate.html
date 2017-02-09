@@ -1,68 +1,62 @@
 <p> CREATEPORTEUR.html </p>
 
-<form name="myForm" ng-submit="create(formData,'porteurs')" novalidate >
+<form class="row col-12" name="myForm" ng-submit="create(formData,'porteurs')" novalidate >
 
 <!-- PARTIE PERSO -->
-  <br>
-  <label> Nom : </label>
-  <input type="text" ng-model="formData.lastname"  ng-required="false" ng-maxlength="15" >
+<div class="input-group bg-base1 p1 col-12">
+  <label class="col-2"> Nom : </label>
+  <input class="col-4" type="text" ng-model="formData.lastname"  ng-required="false" ng-maxlength="15" >
+  <label class="col-2"> Prenom : </label>
+  <input class="col-4" type="text" ng-model="formData.firstname" ng-required="false">
+</div>
 
-  <br>
-  <label> Prenom : </label>
-  <input type="text" ng-model="formData.firstname" ng-required="false">
+<div class="input-group bg-base1 p1 col-12">
+  <label class="col-2" for="">Sexe</label>
+  <input class="" id="sexeF" type="radio" ng-model="formData.sexe" value="F" ng-required="false"> <label class="col-1" for="sexeF">F</label>
+  <input class="" id="sexeM" type="radio" ng-model="formData.sexe"value="M" ng-required="false"> <label class="col-1" for="sexeM">M</label>
 
-  <br>
-  <label>Sexe:</label>
-  <label>F</label> <input type="radio" ng-model="formData.sexe" value="F" ng-required="false">
-  <label>M</label> <input type="radio" ng-model="formData.sexe"value="M" ng-required="false">
-
+  <label class="col-3">Date de Naissance : </label>
+  <input class="col-3"type="date" ng-model="formData.birthDate" ng-required="false">
+</div>
   <!--                        SAUT DE LIGNE                       -->
 
-  <br>
-  <label>Date de Naissance : </label>
-  <input type="date" ng-model="formData.birthDate" ng-required="false">
+<div class="input-group bg-base1 p1 col-12">
+  <label class="col-2">Adresse :</label>
+  <input class="col-2"type="text" ng-model="formData.adress" ng-required="false"></input>
 
-  <br>
-  <label>Adresse :</label>
-  <input type="string" ng-model="formData.adress" ng-required="false"></input>
+  <label class="col-2"> Ville :</label>
+  <input class="col-2"type="text" ng-model="formData.city" ng-required="false" placeholder="Entrez votre ville"  ng-maxlength="33" ng-minlength="2" >
 
-  <br>
-  <label> Ville :</label>
-  <input type="text" ng-model="formData.city" ng-required="false" placeholder="Entrez votre ville"  ng-maxlength="33" ng-minlength="2" >
-
-  <br>
-  <label>Code Postal :</label>
-  <input type="number" ng-model="formData.zipCode" ng-required="false" ng-minlength="5" ng-maxlength="5">
-
+  <label class="col-2">Code Postal :</label>
+  <input class="col-2"type="number" ng-model="formData.zipCode" ng-required="false" ng-minlength="5" ng-maxlength="5">
+</div>
   <!--                        SAUT DE LIGNE                       -->
 
-  <br>
-  <label> Fixe : </label>
-  <input type="number" ng-model="formData.landLine" ng-required="false" ng-minlength="10" ng-maxlength="10">
+<div class="input-group bg-base1 p1 col-12">
+  <label class="col-2"> Fixe : </label>
+  <input class="col-2" type="number" ng-model="formData.landLine" ng-required="false" ng-minlength="10" ng-maxlength="10">
 
-  <br>
-  <label>Mobile :</label>
-  <input type="number" ng-model="formData.mobileNumber" ng-required="false" ng-minlength="10" ng-maxlength="10">
+  <label class="col-2">Mobile :</label>
+  <input class="col-2" type="number" ng-model="formData.mobileNumber" ng-required="false" ng-minlength="10" ng-maxlength="10">
 
-  <br>
-  <label> Fax : </label>
-  <input type="number" ng-model="formData.fax" ng-required="false" >
+  <label class="col-2"> Fax : </label>
+  <input class="col-2" type="number" ng-model="formData.fax" ng-required="false" >
+</div>
 
-  <br>
-  <label>Email :</label>
-  <input type="string" ng-model="formData.email" placeholder="Entrez votre email" ng-required="false" >
-
+<div class="input-group p1 bg-base1 col-12">
+  <label class="col-2">Email :</label>
+  <input class="col-10"type="text" ng-model="formData.email" placeholder="Entrez votre email" ng-required="false" >
+</div>
   <!--   //situationFamiliale -->
 
 
-  <br>
-  <label> Cotorep : </label>
-  <input type="checkbox" ng-model="formData.cotorep" ng-required="false" >
+<div class="input-group bg-base1 p1 col-12">
+  <label class="col-2"> Cotorep : </label>
+  <input class="col-1" type="checkbox" ng-model="formData.cotorep" ng-required="false" id="coto" > <label class="col-1" for="coto"> Check </label>
 
-  <br>
-  <label> Enfant a charge : </label>
-  <input type="number" ng-model="formData.dependentChild" ng-required="false" >
-
+  <label class="col-3"> Enfant a charge : </label>
+  <input class="col-3" type="number" ng-model="formData.dependentChild" ng-required="false" >
+</div>
 
   <!-- PARTIE PRO -->
 
@@ -70,32 +64,35 @@
   <!-- FORMATION -->
 
 
-  <br>
+<div class="input-group p1 bg-base1 col-12">
   <label>Detail formation : :</label>
-  <input type="string" ng-model="formData.formationDetail"  ng-required="false" >
-
+  <input type="text" ng-model="formData.formationDetail"  ng-required="false" >
+</div>
   <!-- QUALIFICATION -->
-  <br>
-  <label> Date inscription anpe : </label>
-  <input type="Date" ng-model="formData.anpeRegistrationDate" ng-required="false">
+<div class="input-group bg-base1 p1 col-12">
+  <label class="col-2"> Date inscription anpe : </label>
+  <input class="col-4"type="Date" ng-model="formData.anpeRegistrationDate" ng-required="false">
 
-  <br>
-  <label> ID Anpe : </label>
-  <input type="string" ng-model="formData.idANPE" ng-required="false">
-
+  <label class="col-2"> ID Anpe : </label>
+  <input class="col-4" type="text" ng-model="formData.idANPE" ng-required="false">
+</div>
   <!-- INDEMNITÉ -->
 
-  <br>
-  <label> Experience: </label>
-  <input type="checkbox" ng-model="formData.experience" ng-required="false">
+<div class="input-group p1 bg-base1 col-12">
+  <label class="col-2"> Experience: </label>
+  <input class="col-2" id="exp" class="col-1" type="checkbox" ng-model="formData.experience" ng-required="false"> <label class="col-2" for="exp">Oui</label>
 
-  <br>
-  <label> Nombre d'année(s) d'experience : </label>
-  <input type="number" ng-model="formData.nbrAnneeExperience" ng-required="false" >
+  <label class="col-3"> Nombre d'année(s) d'experience : </label>
+  <input class="col-3" type="number" ng-model="formData.nbrAnneeExperience" ng-required="false" >
+</div>
 
-  <br>
-  <label>Detail Experience : :</label>
-  <input type="string" ng-model="formData.expDetail"  ng-required="false" >
-
-  <input type="submit" ng-disabled="myForm.$invalid" value="Envoyer" />
+<div class="input-group p1 bg-base1 col-12">
+  <label class="col-2">Detail Experience : :</label>
+  <input class="col-3"type="text" ng-model="formData.expDetail"  ng-required="false" >
+</div>
+<div class="input-group bg-base1 p1 col-12">
+  <p class="col-5"> </p>
+  <input class="col-2"type="submit" ng-disabled="myForm.$invalid" value="Envoyer" href="/#/dossier/_id"/>
+  <p class="col-5"> </p>
+</div>
 </form>

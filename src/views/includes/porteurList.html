@@ -7,43 +7,29 @@
 <br>
 <!-- <label> Chercher dans le porteur d'id :<label> <input type="text" ng-model="id"> <a href="/#/porteur/{{id}}"> Rechercher </a> -->
 <br>
-<div ng-repeat="porteur in porteurs.data">
-  <p>Nom : </p>
-  <a href="/#/porteur/{{porteur._id}}">{{porteur.lastname}}</a>
-  <br>
-  <p>Prenom</p>
-  <p>{{porteur.firstname}}</p>
-  <br>
-  <p>Sexe</p>
-  <p>{{porteur.sexe}}</p>
-  <br>
-  <p> Date de naissance : </p>
-  <p>{{porteur.birthDate}} </p><br>
-
-  <p>Adresse:</p>
-  <p>{{porteur.adress}} </p>
-  <br>
-  <!--
-  <p>ville :</p>
-  <p>{{porteur.ville}}</p>
-
-  <br>
-  <p> numFixe : </p>
-  <p>{{porteur.numFixe}}</p>
-  <br>
-  <p> numPortable : </p>
-  <p>{{porteur.numPortable}}</p><br>
-
-  <p> siteWeb : </p>
-  <a href="{{porteur.siteWeb}}">{{porteur.siteWeb}}</a><br>
-
-  <p> SIRET : </p>
-  <p>{{porteur.siret}}</p><br>
-
-  <p> nbrSalarié : </p>
-  <p>{{porteur.nbrSalarie}} </p><br>
-
-  <p> Gerant : </p>
-  <p> {{porteur.gerant}}</p><br> -->
-  <p> - - - - - - - - - - - - - -   - - - - - - - -   - -</p>
+<div class="row col-12">
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-2">Nom | </label>
+    <label class="col-2">Prenom | </label>
+    <label class="col-2">Sexe | </label>
+    <label class="col-2">Naissance | </label>
+    <label class="col-2">Adresse | </label>
+    <label class="col-2">Ville | </label>
+  </div>
+  <div ng-repeat="porteur in porteurs.data">
+    <div class="input-group bg-base1 p1 col-12">
+      <!-- <label class="col-2">Nom : </label> -->
+      <a class="input col-2"href="/#/porteur/{{porteur._id}}">{{porteur.lastname}}</a>
+      <!-- <label class="col-2">Prenom</label> -->
+      <span  class="input col-2">{{porteur.firstname}}</span>
+       <!-- <label>Sexe</label> -->
+      <span class="input col-2">{{porteur.sexe}}</span>
+      <!-- <label> Date de naissance : </label> -->
+      <span class="input col-2">{{porteur.birthDate}} </span>
+      <!-- <label>Adresse:</label> -->
+      <span class="input col-2">{{porteur.adress}} </span>
+      <!-- <label>ville :</label> -->
+      <span class="input col-2">{{porteur.city}}</span>
+    </div>
+  </div>
 </div>

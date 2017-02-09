@@ -2,25 +2,27 @@
 <a href="/#/dossier/action/patch/{{action._id}}"> Modifier </a>
 <a href="/#/dossier/{{_idDossier}}"> Retour dossier </a>
 <br>
+<div class="row col-12">
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-3">RefDossier :</label>
+    <span class="input col-3">{{action.refDossier}}</span>
+    <label class="col-3">dateAction :</label>
+    <span class="input col-3">{{action.dateAction}}</span>
+  </div>
 
-<p>RefDossier</p>
-<p>{{action.refDossier}}</p>
-<br>
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-3">commentaire :</label>
+    <span class="input col-3">{{action.commentaire}}</span>
+    <label class="col-3">Temps passé :</label>
+    <span class="input col-3">{{action.tempspasse}}</span>
+  </div>
 
-<p>dateAction</p>
-<p>{{action.dateAction}}</p>
-<br>
+  <div class="input-group bg-base1 p1 col-12">
 
-<p>commentaire</p>
-<p>{{action.commentaire}}</p>
-<br>
-
-<p>Temps passé</p>
-<p>{{action.tempspasse}}</p>
-<br>
-
-<p> LISTE PORTEUR AFFILIÉ </p>
-<div ng-repeat="porteur in porteurs">
-  <a href="/#/porteur/{{porteur._id}}" > {{porteur.lastname}} </a>
-    <br>
+    <label> LISTE PORTEUR AFFILIÉ </label>
+    <div ng-repeat="porteur in porteurs">
+      <a href="/#/porteur/{{porteur._id}}" > --->  {{porteur.lastname}} </a>
+        <br>
+    </div>
+  </div>
 </div>

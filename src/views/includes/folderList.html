@@ -7,36 +7,38 @@
 <br>
 <!-- <label> Chercher dans le dossier d'id :<label> <input type="text" ng-model="id"> <a href="/#/dossier/{{id}}"> Rechercher </a> -->
 <br>
-<div ng-repeat="dossier in dossiers.data">
+
+<div class="row col-12" ng-repeat="dossier in dossiers.data">
+
   <a  href="/#/dossier/{{dossier._id}}" >{{dossier.enseigne}} </a>
-  <p>dateCreationPrevu : </p>
-  <p>{{dossier.dateCreationPrevu}}</p>
+  <label>dateCreationPrevu : </label>
+  <span class="input">{{dossier.dateCreationPrevu}}</span>
   <br>
-  <p>dateCreationDossier</p>
-  <p>{{dossier.dateCreationDossier}}</p>
+  <label>dateCreationDossier</label>
+  <span class="input">{{dossier.dateCreationDossier}}</span>
   <br>
-  <p>Enseigne</p>
-  <p>{{dossier.enseigne}}</p>
+  <label>Enseigne</label>
+  <span class="input">{{dossier.enseigne}}</span>
   <br>
-  <p> adresse : </p>
-  <p>{{dossier.adress}} </p><br>
+  <label> adresse : </label>
+  <span class="input">{{dossier.adress}} </span><br>
 
-  <p>codepostal:</p>
-  <p>{{dossier.codePostal}} </p>
+  <label>codepostal:</label>
+  <span class="input">{{dossier.codePostal}} </span>
   <br>
-  <p>ville :</p>
-  <p>{{dossier.ville}}</p>
+  <label>ville :</label>
+  <span class="input">{{dossier.ville}}</span>
 
   <br>
-  <p> numFixe : </p>
-  <p>{{dossier.numFixe}}</p>
+  <label> numFixe : </label>
+  <span class="input">{{dossier.numFixe}}</span>
   <br>
-  <p> numPortable : </p>
-  <p>{{dossier.numPortable}}</p><br>
+  <label> numPortable : </label>
+  <span class="input">{{dossier.numPortable}}</span>
 
-  <p> siteWeb : </p>
+  <label> siteWeb : </label>
   <a href="{{dossier.siteWeb}}">{{dossier.siteWeb}}</a><br>
-
+<!--
   <p> SIRET : </p>
   <p>{{dossier.siret}}</p><br>
 
@@ -45,6 +47,6 @@
 
   <p> Gerant : </p>
   <p> {{dossier.gerant}}</p><br>
-
+-->
   <p> - - - - - - - - - - - - - -   - - - - - - - -   - -</p>
 </div>
