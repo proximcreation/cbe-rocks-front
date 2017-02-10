@@ -12,6 +12,15 @@ app
   //fais un get sur l'action en cours et la stock dans $scope.action
   httpService.get('Actions/'+$scope._id+'?$populate=listePorteur').then(function(resultat){
     $scope.action = resultat.data;
+    var tmpDate = $scope.action.dateAction.split('T')[0];
+
+    var tmpDate2 = {
+      y:tmpDate.split('-')[0],
+      m:tmpDate.split('-')[1]-1,
+      d:tmpDate.split('-')[2]
+    };
+    console.log(tmpDate2);
+    $scope.action.dateAction = new Date(tmpDate2.y, tmpDate2.m,tmpDate2.d,12)
     httpService.get('Dossiers/'+$scope.action.dossier+'?$populate=listePorteur').then(function(resultat){
       $scope.dossier_porteur = resultat.data.listePorteur;
       _.forEach($scope.action.listePorteur, function(_p){
@@ -22,10 +31,10 @@ app
     })
   });
   //fonction appelée lors de l'envois du formulaire
-  $scope.create = function(_data){
+  $scope.create = function(){
     console.log('Patching .... ');
-    _data.listePorteur = $scope.array_id;
-    httpService.patch('actions/'+$scope.action._id,_data);
+    $scope.action.listePorteur = $scope.array_id;
+    httpService.patch('actions/'+$scope.action._id,$scope.action);
     console.log('Patch succes .... Redirection');
     $location.path("/dossier/action/"+$scope._id); //redirection
   };

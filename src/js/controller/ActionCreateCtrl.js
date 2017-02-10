@@ -14,7 +14,6 @@ app
     // mettre les porteurs du dossier dans un tableau
     _.forEach($scope.dossier.listePorteur,function(_p){
       $scope.porteurs.push(_p);
-      console.log($scope.porteurs);
     })
   });
 
@@ -22,13 +21,32 @@ app
 
 //fonction appelée lors de l'envois du formulaire
   $scope.create = function(_data,_url){
+    console.log(_data.dateAction);
+    //------------------------------------------------
+    var tmpDate = _data.dateAction.split('T')[0];
+
+    var tmpDate2 = {
+      y:tmpDate.split('-')[0],
+      m:tmpDate.split('-')[1],
+      d:tmpDate.split('-')[2]
+    };
+    console.log(tmpDate2);
+    _data.dateAction = new Date(tmpDate2.y, tmpDate2.m,tmpDate2.d)
+    //-----------------------------------------------------------------------------
     _data.dossier = $scope._id;
     _data.listePorteur = $scope.array_id;
     httpService.post(_url,_data);
-    console.log('create');
-    $location.path("/dossier"); //redirection
+    console.log(_data);
+    console.log(_data.dateAction);
+    $location.path("/dossier/action/liste/"+$scope._id); //redirection
   }
+$scope.dateToShort= function(_date){
+  var day = _date.getDate();
+  var year = _date.getFullYear();
+  var month = _date.getMonth();
+  return new Date()
 
+}
 // Tableau de gestion des porteurs
   $scope.array_porteur = [];
   $scope.array_id = [];
@@ -36,7 +54,6 @@ app
   $scope.push = function(_data){
     $scope.array_porteur.push(_data);
     $scope.array_id.push(_data._id);
-    console.log($scope.array_id);
   }
 //
   $scope.pull = function(_data){

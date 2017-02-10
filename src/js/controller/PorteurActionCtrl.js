@@ -10,7 +10,8 @@ app
   });
   httpService.get('actions?listePorteur='+$scope._id+'&$populate=dossier').then(function(resultat){
     $scope.actions = resultat.data;
-    console.log($scope.actions);
+    $scope.dossier_id = $scope.actions.data[0].dossier._id;
+    console.log($scope.dossier_id);
   });
 
 

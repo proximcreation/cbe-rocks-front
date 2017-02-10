@@ -1,5 +1,5 @@
 <p> folderActionCreateId.html </p>
-
+<a href="/#/dossier/action/liste/{{_id}}"> Retour Action </a>
 <form class="row col-12"name="myForm" ng-submit="create(formData,'Actions')" novalidate >
 
 <div class="input-group bg-base1 p1 col-12">
@@ -12,7 +12,7 @@
 
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-3">commentaire</label>
-  <input class="col-3" type="string" ng-model="formData.commentaire"  ng-required="false" >
+  <input class="col-3" type="text" ng-model="formData.commentaire"  ng-required="false" >
 
   <label class="col-3">Temps passé</label>
   <input class="col-3" type="number" ng-model="formData.tempspasse"  ng-required="false" >

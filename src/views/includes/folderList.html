@@ -7,37 +7,34 @@
 <br>
 <!-- <label> Chercher dans le dossier d'id :<label> <input type="text" ng-model="id"> <a href="/#/dossier/{{id}}"> Rechercher </a> -->
 <br>
+<div class="input-group row bg-base1 p1 col-12">
+  <label class="col-2">Enseigne </label>
+  <label class="col-2">Adresse</label>
+  <label class="col-2">Code Postal</label>
+  <label class="col-2">Ville</label>
+  <label class="col-2">date Dossier</label>
+  <label class="col-2">Gerant</label>
 
+</div>
 <div class="row col-12" ng-repeat="dossier in dossiers.data">
+  <div class="input-group row bg-base1 p1 col-12">
 
-  <a  href="/#/dossier/{{dossier._id}}" >{{dossier.enseigne}} </a>
-  <label>dateCreationPrevu : </label>
-  <span class="input">{{dossier.dateCreationPrevu}}</span>
-  <br>
-  <label>dateCreationDossier</label>
-  <span class="input">{{dossier.dateCreationDossier}}</span>
-  <br>
-  <label>Enseigne</label>
-  <span class="input">{{dossier.enseigne}}</span>
-  <br>
-  <label> adresse : </label>
-  <span class="input">{{dossier.adress}} </span><br>
+  <!-- <label>Enseigne</label> -->
+  <a  class="col-2" href="/#/dossier/{{dossier._id}}" >{{dossier.enseigne}} </a>
 
-  <label>codepostal:</label>
-  <span class="input">{{dossier.codePostal}} </span>
-  <br>
-  <label>ville :</label>
-  <span class="input">{{dossier.ville}}</span>
+  <!-- <label> adresse : </label> -->
+  <span class="col-2 input">{{dossier.adress}} </span>
+  <!-- <label>codepostal:</label> -->
+  <span class="col-2 input">{{dossier.codePostal}} </span>
+  <!-- <label>ville :</label> -->
+  <span class="col-2 input">{{dossier.ville}}</span>
+  <!-- <label>dateCreationDossier</label> -->
+  <span class="col-2 input">{{dossier.dateCreationDossier}}</span>
+  <!-- <label> Gerant : </label> -->
+  <span class="col-2 input">{{dossier.gerant}}</span>
 
-  <br>
-  <label> numFixe : </label>
-  <span class="input">{{dossier.numFixe}}</span>
-  <br>
-  <label> numPortable : </label>
-  <span class="input">{{dossier.numPortable}}</span>
 
-  <label> siteWeb : </label>
-  <a href="{{dossier.siteWeb}}">{{dossier.siteWeb}}</a><br>
+
 <!--
   <p> SIRET : </p>
   <p>{{dossier.siret}}</p><br>
@@ -48,5 +45,4 @@
   <p> Gerant : </p>
   <p> {{dossier.gerant}}</p><br>
 -->
-  <p> - - - - - - - - - - - - - -   - - - - - - - -   - -</p>
 </div>

@@ -1,25 +1,27 @@
 <p> porteurAction.html </p>
 <p>{{porteur.firstname}}</p>
 
+<div class="row col-12">
+  <div class="input-group bg-base1 p1 col-12">
+    <label class="col-2">Enseigne</label>
+    <label class="col-2">RefDossier</label>
+    <label class="col-2">dateAction</label>
+    <label class="col-2">commentaire</label>
+    <label class="col-2">temps passé</label>
+  </div>
+  <div class="col-12" ng-repeat="action in actions.data">
 
-<div ng-repeat="action in actions.data">
-  <br>
-  <p>Dossier : </p>
-  <a>{{action.dossier.enseigne}}</a>
-  <br>
-  <br>
-  <p>refDossier : </p>
-  <p>{{action.refDossier}}</p>
-  <br>
-  <p>dateAction</p>
-  <p>{{action.dateAction}}</p>
-  <br>
-  <p>commentaire</p>
-  <p>{{action.commentaire}}</p>
-  <br>
-  <p> tempspassé : </p>
-  <p>{{action.tempspasse}} </p><br>
+    <!-- <p>Dossier : </p> -->
+    <a  href="/#/dossier/{{dossier_id}}"class="col-2">{{action.dossier.enseigne}}</a>
+    <!-- <p>refDossier : </p> -->
+    <span class="col-2">{{action.refDossier}}</span>
+    <!-- <p>dateAction</p> -->
+    <span class="col-2">{{action.dateAction}}</span>
+    <!-- <p>commentaire</p> -->
+    <span class="col-2">{{action.commentaire}}</span>
+    <!-- <p> tempspassé : </p> -->
+    <span class="col-2">{{action.tempspasse}} </span>
 
-  <a  href="/#/dossier/action/{{action._id}}" > Voir action </a>
-  <p> - - - - - - - - - - - - - -   - - - - - - - -   - -</p>
+    <a class="col-2" href="/#/dossier/action/{{action._id}}" > Voir action </a>
+  </div>
 </div>
