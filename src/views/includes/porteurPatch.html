@@ -5,52 +5,52 @@
 
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-2"> Nom : </label>
-  <input class="col-4" type="text" ng-model="formData.lastname"  ng-value="porteur.lastname" >
+  <input class="col-4" type="text" ng-model="porteur.lastname"  >
   <label class="col-2"> Prenom : </label>
-  <input class="col-4" type="text" ng-model="formData.firstname" ng-required="false" ng-value="porteur.firstname">
+  <input class="col-4" type="text" ng-model="porteur.firstname" ng-required="false">
 </div>
 
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-2">Sexe:</label>
-  <input id="sexeF" type="radio" ng-model="formData.sexe" value="F" ng-required="false"> <label class="col-1" for="sexeF">F</label>
-  <input id="sexeM" type="radio" ng-model="formData.sexe" value="M" ng-required="false"> <label class="col-1" for="sexeM">M</label>
+  <input id="sexeF" type="radio" ng-model="porteur.sexe" value="F" ng-required="false"> <label class="col-1" for="sexeF">F</label>
+  <input id="sexeM" type="radio" ng-model="porteur.sexe" value="M" ng-required="false"> <label class="col-1" for="sexeM">M</label>
 
   <label class="col-3">Date de Naissance : </label>
-  <input class="col-3" type="date" ng-model="formData.birthDate" ng-required="false" ng-value="porteur.birthDate">
+  <input class="col-3" type="date" ng-model="porteur.birthDate" ng-required="false" >
 </div>
 
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-2">Adresse :</label>
-  <input class="col-2" type="text" ng-model="formData.adress" ng-required="false" ng-value="porteur.adress">
+  <input class="col-2" type="text" ng-model="porteur.adress" ng-required="false" >
   <label class="col-2"> Ville :</label>
-  <input class="col-2" type="text" ng-model="formData.city" ng-required="false" placeholder="Entrez votre ville" ng-value="porteur.city" ng-maxlength="33" ng-minlength="2" >
+  <input class="col-2" type="text" ng-model="porteur.city" ng-required="false" placeholder="Entrez votre ville"  ng-maxlength="33" ng-minlength="2" >
   <label class="col-2">Code Postal :</label>
-  <input class="col-2" type="number" ng-model="formData.zipCode" ng-required="false" ng-value="porteur.zipCode" ng-minlength="5" ng-maxlength="5">
+  <input class="col-2" type="number" ng-model="porteur.zipCode" ng-required="false"  ng-minlength="5" ng-maxlength="5">
 </div>
 <!--                        SAUT DE LIGNE                       -->
 
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-2"> Fixe : </label>
-  <input class="col-2" type="number" ng-model="formData.landLine" ng-required="false" ng-value="porteur.landLine" ng-minlength="10" ng-maxlength="10">
+  <input class="col-2" type="number" ng-model="porteur.landLine" ng-required="false"  ng-minlength="10" ng-maxlength="10">
   <label class="col-2">Mobile :</label>
-  <input class="col-2" type="number" ng-model="formData.mobileNumber" ng-required="false" ng-value="porteur.mobileNumber" ng-minlength="10" ng-maxlength="10">
+  <input class="col-2" type="number" ng-model="porteur.mobileNumber" ng-required="false"  ng-minlength="10" ng-maxlength="10">
   <label class="col-2"> Fax : </label>
-  <input class="col-2" type="number" ng-model="formData.fax" ng-required="false" ng-value="porteur.fax">
+  <input class="col-2" type="number" ng-model="porteur.fax" ng-required="false" >
 </div>
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-2">Email :</label>
-  <input class="col-10" type="text" ng-model="formData.email" placeholder="Entrez votre email" ng-value="porteur.email" ng-required="false" >
+  <input class="col-10" type="text" ng-model="porteur.email" placeholder="Entrez votre email"  ng-required="false" >
 </div>
 <!--   //situationFamiliale -->
 
 
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-2"> Cotorep : </label>
-  <input id="coto" class="col-1" type="checkbox" ng-model="formData.cotorep" ng-required="false" ng-value="porteur.cotorep">
+  <input id="coto" class="col-1" type="checkbox" ng-model="porteur.cotorep" ng-required="false" >
   <label for="coto" class="col-1"> Check </label>
 
   <label class="col-2"> Enfant a charge : </label>
-  <input class="col-3"type="number" ng-model="formData.dependentChild" ng-required="false" ng-value="porteur.dependentChild">
+  <input class="col-3"type="number" ng-model="porteur.dependentChild" ng-required="false" >
 
 </div>
 
@@ -64,32 +64,32 @@
 
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-2">Detail formation : :</label>
-  <input class="col-10" type="text" ng-model="formData.formationDetail"  ng-required="false" ng-value="porteur.formationDetail">
+  <input class="col-10" type="text" ng-model="porteur.formationDetail"  ng-required="false" >
 </div>
 
 <!-- QUALIFICATION -->
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-3"> Date inscription anpe : </label>
-  <input class="col-3"type="Date" ng-model="formData.anpeRegistrationDate" ng-required="false" ng-value="porteur.anpeRegistrationDate">
+  <input class="col-3"type="Date" ng-model="porteur.anpeRegistrationDate" ng-required="false" >
   <label class="col-3"> ID Anpe : </label>
-  <input class="col-3" type="text" ng-model="formData.idANPE" ng-required="false" ng-value="porteur.idANPE">
+  <input class="col-3" type="text" ng-model="porteur.idANPE" ng-required="false" >
 </div>
 <!-- INDEMNITÉ -->
 
 <div class="input-group bg-base1 p1 col-12">
   <label class="col-3"> Experience: </label>
-  <input class="col-3" type="checkbox" ng-model="formData.experience" ng-required="false" ng-value="porteur.experience">
+  <input class="col-3" type="checkbox" ng-model="porteur.experience" ng-required="false" >
   <label class="col-3"> Nombre d'année(s) d'experience : </label>
-  <input class="col-3" type="number" ng-model="formData.nbrAnneeExperience" ng-required="false" ng-value="porteur.nbrAnneeExperience">
+  <input class="col-3" type="number" ng-model="porteur.nbrAnneeExperience" ng-required="false">
 </div>
 
 <div class="input-group bg-base1 p1 col-12">
   <label class="2">Detail Experience : :</label>
-  <input class="10"type="text" ng-model="formData.expDetail"  ng-required="false" ng-value="porteur.expDetail">
+  <input class="10"type="text" ng-model="porteur.expDetail"  ng-required="false" >
 </div>
 <div class="input-group bg-base1 p1 col-12">
   <p class="col-5"> </p>
-  <input class="col-2"type="submit" ng-disabled="myForm.$invalid" value="Envoyer" href="/#/dossier/_id"/>
+  <input class="col-2"type="submit"  value="Envoyer" href="/#/dossier/_id"/>
   <p class="col-5"> </p>
 </div>
 </form>

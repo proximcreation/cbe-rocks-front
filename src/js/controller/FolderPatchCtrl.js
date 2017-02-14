@@ -10,7 +10,27 @@ app
 
   //get du dossier
   httpService.get('dossiers/'+$scope._id+'?$populate=listePorteur').then(function(resultat){
+    //toShort de la date pour pouvoir la mettre en valeur par défaut du input:date
     $scope.dossier = resultat.data;
+    var tmpDate = $scope.dossier.dateCreationPrevu.split('T')[0];
+
+    var tmpDate2 = {
+      y:tmpDate.split('-')[0],
+      m:tmpDate.split('-')[1]-1,
+      d:tmpDate.split('-')[2]
+    };
+    $scope.dossier.dateCreationPrevu = new Date(tmpDate2.y, tmpDate2.m,tmpDate2.d,12);
+    // ToShort de la seconde date
+    var tmpDate = $scope.dossier.dateCreationDossier.split('T')[0];
+
+    var tmpDate2 = {
+      y:tmpDate.split('-')[0],
+      m:tmpDate.split('-')[1]-1,
+      d:tmpDate.split('-')[2]
+    };
+    console.log(tmpDate2);
+    $scope.dossier.dateCreationDossier = new Date(tmpDate2.y, tmpDate2.m,tmpDate2.d,12);
+
     _.forEach($scope.dossier.listePorteur, function(_p){
         $scope.array_id.push(_p._id);
         $scope.array_porteur.push(_p);
@@ -19,8 +39,8 @@ app
   //patch un objet d'ID _id
   $scope.patchObject =function(_o,_data,){
     console.log("$scope.patchObject");
-    _data.listePorteur = $scope.array_id;
-    httpService.patch(_o+'/'+$scope._id,_data);
+    $scope.dossier.listePorteur = $scope.array_id;
+    httpService.patch(_o+'/'+$scope._id,$scope.dossier);
     $location.path("/dossier/"+$scope._id);
   }
 

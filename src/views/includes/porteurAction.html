@@ -9,7 +9,8 @@
     <label class="col-2">commentaire</label>
     <label class="col-2">temps passé</label>
   </div>
-  <div class="col-12" ng-repeat="action in actions.data">
+  <div class="col-12 input-group" > <input placeholder="Recherche" type="text" ng-model="keyword" > </div>  
+  <div class="col-12" ng-repeat="action in actions.data | filter:keyword" >
 
     <!-- <p>Dossier : </p> -->
     <a  href="/#/dossier/{{dossier_id}}"class="col-2">{{action.dossier.enseigne}}</a>

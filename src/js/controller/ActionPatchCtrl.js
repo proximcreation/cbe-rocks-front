@@ -20,7 +20,7 @@ app
       d:tmpDate.split('-')[2]
     };
     console.log(tmpDate2);
-    $scope.action.dateAction = new Date(tmpDate2.y, tmpDate2.m,tmpDate2.d,12)
+    $scope.action.dateAction = new Date(tmpDate2.y, tmpDate2.m,tmpDate2.d,12);
     httpService.get('Dossiers/'+$scope.action.dossier+'?$populate=listePorteur').then(function(resultat){
       $scope.dossier_porteur = resultat.data.listePorteur;
       _.forEach($scope.action.listePorteur, function(_p){

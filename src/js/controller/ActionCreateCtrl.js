@@ -22,17 +22,7 @@ app
 //fonction appelée lors de l'envois du formulaire
   $scope.create = function(_data,_url){
     console.log(_data.dateAction);
-    //------------------------------------------------
-    var tmpDate = _data.dateAction.split('T')[0];
 
-    var tmpDate2 = {
-      y:tmpDate.split('-')[0],
-      m:tmpDate.split('-')[1],
-      d:tmpDate.split('-')[2]
-    };
-    console.log(tmpDate2);
-    _data.dateAction = new Date(tmpDate2.y, tmpDate2.m,tmpDate2.d)
-    //-----------------------------------------------------------------------------
     _data.dossier = $scope._id;
     _data.listePorteur = $scope.array_id;
     httpService.post(_url,_data);

@@ -4,7 +4,7 @@
 
 <div ng-if="me!==null && me!==undefined" >
   <h2> Welcome {{me.data.email}}</h2>
-  <textarea> Token : {{me.token}} </textarea>
+  <!-- <textarea> Token : {{me.token}} </textarea> -->
   <div ng-include="'/views/includes/form.html'"> </div>
   <a href="" ng-click="auth.destroy()">DESTROY</a>
 
